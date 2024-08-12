@@ -79,7 +79,7 @@ def add_commendation(schoolkid, subject_title):
     if (not lessons):
         print("No such subject or lesson for schoolkid. Please check subject title or timetable")
         return
-    lesson = lessons.order_by('-date')[0]
+    lesson = lessons.order_by('-date').first()
     Commendation.objects.create(text=commendation_text, created=lesson.date,
                                 schoolkid=schoolkid, subject=lesson.subject, teacher=lesson.teacher)
     print("Added commedation '{0}' on {1}".format(
