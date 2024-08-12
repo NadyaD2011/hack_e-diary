@@ -46,7 +46,7 @@ def get_schoolkid(name):
         print("No one schoolkid is returned. Please, make your search more accurate")
         return
     print("Got schoolkid:", schoolkid)
-    return schoolkid[0]
+    return schoolkid
 
 
 
